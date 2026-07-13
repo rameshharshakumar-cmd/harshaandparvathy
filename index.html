@@ -1,77 +1,443 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#F8F5F0">
-<title>Harsha & Parvathy | The First Chapter</title>
-<style>
-:root{--ivory:#F8F5F0;--gold:#C9A96A;--navy:#1E2A44;--emerald:#2F5D50;--rose:#D8A7A7;--muted:#6F746F}
-*{box-sizing:border-box}
-body{margin:0;min-height:100vh;display:grid;place-items:center;padding:24px;font-family:Georgia,"Times New Roman",serif;color:var(--navy);background:radial-gradient(circle at 15% 20%,rgba(216,167,167,.22),transparent 30%),radial-gradient(circle at 85% 80%,rgba(47,93,80,.16),transparent 34%),linear-gradient(145deg,#fffdf9 0%,var(--ivory) 55%,#f5efe8 100%);overflow-x:hidden}
-.hero{width:min(92vw,720px);padding:clamp(38px,7vw,72px) clamp(24px,7vw,66px);text-align:center;border:1px solid rgba(201,169,106,.58);border-radius:30px;background:rgba(255,253,249,.84);box-shadow:0 26px 76px rgba(30,42,68,.11);backdrop-filter:blur(12px);animation:rise 1s ease-out both}
-@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
-.monogram{width:96px;height:96px;margin:0 auto 26px;display:grid;place-items:center;border:1px solid rgba(201,169,106,.78);border-radius:50%;color:var(--gold);font-size:28px;letter-spacing:2px;background:rgba(248,245,240,.72)}
-.eyebrow{margin:0 0 14px;font-family:Arial,sans-serif;font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--emerald)}
-h1{margin:0;font-size:clamp(44px,9vw,78px);font-weight:400;line-height:.98;letter-spacing:-.035em}
-.ampersand{display:block;margin:9px 0;color:var(--gold);font-size:.64em;font-style:italic}
-.tagline{margin:24px 0 8px;font-size:clamp(17px,4vw,22px);color:var(--emerald);font-style:italic}
-.date{margin:22px 0 0;font-family:Arial,sans-serif;font-size:13px;letter-spacing:.20em;text-transform:uppercase;color:var(--muted)}
-.divider{width:90px;height:1px;margin:28px auto;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
-.message{margin:0 auto;max-width:470px;font-family:Arial,sans-serif;font-size:15px;line-height:1.78;color:var(--muted)}
-.button{border:1px solid var(--gold);border-radius:999px;margin-top:30px;padding:15px 28px;min-width:190px;background:rgba(255,255,255,.62);color:var(--navy);font-family:Arial,sans-serif;font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;cursor:pointer}
-.domain{margin:20px 0 0;font-family:Arial,sans-serif;font-size:12px;color:rgba(111,116,111,.82)}
-.overlay{position:fixed;inset:0;display:none;place-items:center;padding:20px;background:rgba(30,42,68,.56);backdrop-filter:blur(8px);z-index:10}
-.overlay.open{display:grid}
-.invitation{width:min(94vw,640px);max-height:88vh;overflow:auto;padding:38px 28px;border-radius:26px;border:1px solid rgba(201,169,106,.72);background:#fffdf9;box-shadow:0 30px 90px rgba(0,0,0,.24);text-align:center;position:relative}
-.close{position:absolute;top:14px;right:14px;width:38px;height:38px;border:0;border-radius:50%;background:rgba(30,42,68,.07);color:var(--navy);font-size:22px;cursor:pointer}
-.invitation h2{margin:8px 0 6px;font-size:clamp(32px,7vw,50px);font-weight:400}
-.official{margin:10px 0 22px;font-family:Arial,sans-serif;font-size:14px;color:var(--muted)}
-.invite-copy{margin:0 auto 24px;max-width:470px;font-size:18px;line-height:1.7;color:#4b5260}
-.details{margin:28px auto 0;display:grid;gap:14px;max-width:460px}
-.detail-card{padding:18px;border:1px solid rgba(201,169,106,.34);border-radius:18px;background:rgba(248,245,240,.62)}
-.detail-label{margin:0 0 6px;font-family:Arial,sans-serif;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--emerald)}
-.detail-value{margin:0;font-size:18px;line-height:1.45}
-@media(max-width:520px){.hero{border-radius:22px}.monogram{width:80px;height:80px;font-size:24px}.message{font-size:14px}.invitation{padding:34px 20px}}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f7eedf" />
+  <meta name="description" content="The wedding invitation of Harsha & Parvathy — 09 August 2026." />
+  <title>Harsha & Parvathy | The First Chapter</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --ivory:#f7eedf;
+      --paper:#fffaf2;
+      --gold:#b78835;
+      --deep-gold:#8f6420;
+      --green:#213f28;
+      --sage:#819171;
+      --rose:#d8a18f;
+      --ink:#3d342d;
+      --muted:#74695f;
+      --line:rgba(183,136,53,.34);
+      --shadow:0 22px 65px rgba(58,45,28,.12);
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      color:var(--ink);
+      background:
+        radial-gradient(circle at 8% 12%,rgba(216,161,143,.17),transparent 26%),
+        radial-gradient(circle at 88% 84%,rgba(129,145,113,.13),transparent 28%),
+        linear-gradient(180deg,#fffaf4 0%,var(--ivory) 100%);
+      font-family:"DM Sans",sans-serif;
+      overflow-x:hidden;
+    }
+
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      opacity:.18;
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.13'/%3E%3C/svg%3E");
+      mix-blend-mode:multiply;
+      z-index:20;
+    }
+
+    .topbar{
+      position:fixed;
+      inset:14px 14px auto;
+      display:flex;
+      justify-content:space-between;
+      z-index:30;
+      pointer-events:none;
+    }
+    .icon-button{
+      width:44px;height:44px;border-radius:50%;
+      border:1px solid rgba(183,136,53,.45);
+      background:rgba(255,250,242,.85);
+      backdrop-filter:blur(10px);
+      color:var(--green);
+      box-shadow:0 8px 24px rgba(54,41,24,.12);
+      display:grid;place-items:center;
+      pointer-events:auto;cursor:pointer;
+      font-size:18px;
+    }
+
+    .menu{
+      position:fixed;
+      inset:0;
+      z-index:40;
+      display:none;
+      place-items:center;
+      background:rgba(31,49,35,.74);
+      backdrop-filter:blur(12px);
+      padding:24px;
+    }
+    .menu.open{display:grid}
+    .menu-card{
+      width:min(92vw,420px);
+      background:var(--paper);
+      border:1px solid var(--line);
+      border-radius:28px;
+      padding:34px 26px;
+      box-shadow:var(--shadow);
+      text-align:center;
+    }
+    .menu-card a{
+      display:block;
+      padding:15px;
+      text-decoration:none;
+      color:var(--green);
+      font-family:"Cormorant Garamond",serif;
+      font-size:28px;
+      border-bottom:1px solid var(--line);
+    }
+    .menu-card a:last-of-type{border-bottom:0}
+
+    .hero-shell{
+      width:100%;
+      display:grid;
+      place-items:center;
+      padding:0 0 26px;
+      min-height:100vh;
+    }
+
+    .hero-art{
+      position:relative;
+      width:min(100vw,520px);
+      aspect-ratio:756/1485;
+      overflow:hidden;
+      background:#eadfcf;
+      box-shadow:var(--shadow);
+    }
+    .hero-art img{
+      width:100%;height:100%;display:block;object-fit:cover;
+    }
+    .hero-art::after{
+      content:"";
+      position:absolute;inset:auto 0 0;height:23%;
+      background:linear-gradient(180deg,transparent,rgba(24,54,31,.1));
+      pointer-events:none;
+    }
+    .hero-hit{
+      position:absolute;
+      left:14%;right:14%;bottom:1.8%;height:7.6%;
+      border:0;border-radius:999px;background:transparent;
+      cursor:pointer;z-index:5;
+    }
+    .hero-hit:focus-visible{outline:3px solid #fff;outline-offset:4px}
+
+    .scroll-cue{
+      position:absolute;
+      bottom:6px;left:50%;transform:translateX(-50%);
+      width:28px;height:28px;border-radius:50%;
+      background:rgba(255,250,242,.72);
+      display:grid;place-items:center;color:var(--green);
+      animation:bob 1.7s ease-in-out infinite;
+      z-index:4;
+    }
+    @keyframes bob{50%{transform:translate(-50%,6px)}}
+
+    .section{
+      padding:84px 22px;
+      position:relative;
+    }
+    .section-inner{width:min(100%,880px);margin:0 auto}
+    .eyebrow{
+      margin:0 0 10px;
+      color:var(--deep-gold);
+      letter-spacing:.24em;
+      text-transform:uppercase;
+      font-size:11px;
+      font-weight:600;
+      text-align:center;
+    }
+    h2{
+      margin:0;
+      font-family:"Cormorant Garamond",serif;
+      font-size:clamp(42px,9vw,68px);
+      font-weight:500;
+      line-height:1;
+      color:var(--green);
+      text-align:center;
+    }
+    .lead{
+      max-width:650px;
+      margin:24px auto 0;
+      text-align:center;
+      font-family:"Cormorant Garamond",serif;
+      font-size:clamp(22px,4.8vw,31px);
+      line-height:1.38;
+      color:#56483e;
+    }
+    .divider{
+      width:94px;height:1px;margin:28px auto;
+      background:linear-gradient(90deg,transparent,var(--gold),transparent);
+    }
+
+    .invitation-card{
+      background:rgba(255,250,242,.82);
+      border:1px solid var(--line);
+      border-radius:30px;
+      padding:clamp(28px,6vw,56px);
+      box-shadow:var(--shadow);
+      position:relative;
+      overflow:hidden;
+    }
+    .invitation-card::before,
+    .invitation-card::after{
+      content:"✦";
+      position:absolute;color:rgba(183,136,53,.5);font-size:20px;
+    }
+    .invitation-card::before{top:18px;left:20px}
+    .invitation-card::after{right:20px;bottom:18px}
+
+    .official-names{
+      text-align:center;
+      font-family:"Cormorant Garamond",serif;
+      font-size:clamp(35px,7vw,56px);
+      color:var(--green);
+      margin:0;
+    }
+    .official-names span{display:block;color:var(--gold);font-size:.75em;margin:4px}
+
+    .details-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:16px;
+      margin-top:36px;
+    }
+    .detail{
+      background:linear-gradient(180deg,rgba(255,255,255,.7),rgba(245,237,222,.72));
+      border:1px solid var(--line);
+      border-radius:22px;
+      padding:24px 16px;
+      text-align:center;
+    }
+    .detail .icon{font-size:25px;color:var(--gold)}
+    .detail small{
+      display:block;margin:10px 0 6px;text-transform:uppercase;
+      letter-spacing:.16em;font-size:10px;color:var(--sage);font-weight:600;
+    }
+    .detail strong{
+      display:block;font-family:"Cormorant Garamond",serif;
+      color:var(--green);font-size:24px;font-weight:600;line-height:1.12;
+    }
+
+    .families{
+      display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:34px;
+    }
+    .family-card{
+      border:1px solid var(--line);border-radius:24px;padding:28px 22px;
+      background:rgba(255,250,242,.66);text-align:center;
+    }
+    .family-card h3{
+      font-family:"Cormorant Garamond",serif;font-size:34px;color:var(--green);
+      margin:0 0 12px;
+    }
+    .family-card p{margin:0;line-height:1.75;color:var(--muted);font-size:14px}
+
+    .blessing{
+      background:linear-gradient(145deg,#294b31,#17331f);
+      color:#fffaf2;
+      text-align:center;
+      overflow:hidden;
+    }
+    .blessing h2{color:#f5deb1}
+    .blessing .lead{color:#fffaf2}
+    .blessing::before,
+    .blessing::after{
+      content:"";position:absolute;width:260px;height:260px;border-radius:50%;
+      background:radial-gradient(circle,rgba(201,169,106,.18),transparent 68%);
+    }
+    .blessing::before{top:-110px;left:-90px}
+    .blessing::after{bottom:-120px;right:-70px}
+
+    .venue-card{
+      margin-top:34px;border-radius:28px;overflow:hidden;
+      border:1px solid var(--line);background:var(--paper);box-shadow:var(--shadow);
+    }
+    .venue-visual{
+      min-height:260px;
+      display:grid;place-items:center;text-align:center;padding:36px 22px;
+      background:
+        linear-gradient(rgba(255,250,242,.74),rgba(255,250,242,.74)),
+        radial-gradient(circle at 50% 30%,rgba(216,161,143,.4),transparent 40%),
+        linear-gradient(135deg,#e9dbc7,#cfd8c7);
+    }
+    .venue-visual h3{
+      margin:0;font-family:"Cormorant Garamond",serif;font-size:44px;color:var(--green)
+    }
+    .venue-visual p{margin:10px 0 0;color:var(--muted);line-height:1.6}
+    .actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;padding:22px}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      min-width:190px;padding:14px 22px;border-radius:999px;text-decoration:none;
+      font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;
+      transition:.2s ease;
+    }
+    .btn-primary{background:var(--green);color:#fff;border:1px solid var(--green)}
+    .btn-secondary{background:transparent;color:var(--green);border:1px solid var(--gold)}
+    .btn:hover{transform:translateY(-2px)}
+
+    footer{
+      padding:54px 20px 70px;text-align:center;color:var(--muted);
+      font-family:"Cormorant Garamond",serif;font-size:20px;
+    }
+
+    .reveal{opacity:0;transform:translateY(22px);transition:.7s ease}
+    .reveal.visible{opacity:1;transform:none}
+
+    @media(max-width:720px){
+      .details-grid{grid-template-columns:1fr}
+      .families{grid-template-columns:1fr}
+      .section{padding:70px 18px}
+    }
+
+    @media(min-width:521px){
+      .hero-art{border-radius:30px;margin-top:26px;overflow:hidden}
+    }
+
+    @media(prefers-reduced-motion:reduce){
+      *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+    }
+  </style>
 </head>
 <body>
-<main class="hero">
-  <div class="monogram">H &amp; P</div>
-  <p class="eyebrow">The First Chapter</p>
-  <h1>Harsha<span class="ampersand">&amp;</span>Parvathy</h1>
-  <p class="tagline">A celebration of love, happiness and blessings</p>
-  <p class="date">09 August 2026 · Udayanapuram, Kerala</p>
-  <div class="divider"></div>
-  <p class="message">With the blessings of our families, we warmly invite you to celebrate the beginning of our journey together.</p>
-  <button class="button" id="openInvitation">Open Invitation</button>
-  <p class="domain">harshaandparvathy.in</p>
-</main>
+  <div class="topbar">
+    <button class="icon-button" id="menuOpen" aria-label="Open menu">☰</button>
+    <a class="icon-button" href="#venue" aria-label="Go to venue">⌖</a>
+  </div>
 
-<div class="overlay" id="invitationOverlay" role="dialog" aria-modal="true">
-  <section class="invitation">
-    <button class="close" id="closeInvitation" aria-label="Close invitation">&times;</button>
-    <p class="eyebrow">Together with our families</p>
-    <h2>Harsha &amp; Parvathy</h2>
-    <p class="official">Harshakumar Ramesh &amp; Parvathy Prasannan</p>
-    <div class="divider"></div>
-    <p class="invite-copy">We would be honoured by your presence and blessings as we celebrate our wedding and begin a new chapter of life together.</p>
-    <div class="details">
-      <article class="detail-card"><p class="detail-label">Wedding Date</p><p class="detail-value">Sunday, 09 August 2026</p></article>
-      <article class="detail-card"><p class="detail-label">Muhurtham</p><p class="detail-value">10:45 AM – 11:45 AM</p></article>
-      <article class="detail-card"><p class="detail-label">Venue</p><p class="detail-value">Chiramel Auditorium<br>Udayanapuram, Kerala</p></article>
+  <div class="menu" id="menu" aria-hidden="true">
+    <div class="menu-card">
+      <a href="#invitation">Invitation</a>
+      <a href="#details">Ceremony</a>
+      <a href="#families">Families</a>
+      <a href="#venue">Venue</a>
+      <button class="icon-button" id="menuClose" aria-label="Close menu" style="margin:22px auto 0">×</button>
     </div>
-  </section>
-</div>
+  </div>
 
-<script>
-const overlay=document.getElementById("invitationOverlay");
-const openButton=document.getElementById("openInvitation");
-const closeButton=document.getElementById("closeInvitation");
-openButton.onclick=()=>{overlay.classList.add("open");document.body.style.overflow="hidden"};
-closeButton.onclick=()=>{overlay.classList.remove("open");document.body.style.overflow=""};
-overlay.onclick=e=>{if(e.target===overlay)closeButton.click()};
-document.onkeydown=e=>{if(e.key==="Escape")closeButton.click()};
-</script>
+  <header class="hero-shell" id="home">
+    <div class="hero-art">
+      <picture>
+        <source srcset="assets/hero-approved.webp" type="image/webp">
+        <img src="assets/hero-approved.webp" alt="Harsha and Parvathy wedding invitation artwork">
+      </picture>
+      <button class="hero-hit" id="openInvitation" aria-label="Open invitation"></button>
+      <div class="scroll-cue" aria-hidden="true">⌄</div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" id="invitation">
+      <div class="section-inner reveal">
+        <div class="invitation-card">
+          <p class="eyebrow">Together with our families</p>
+          <h2>We invite you</h2>
+          <div class="divider"></div>
+          <p class="official-names">Harshakumar Ramesh<span>&amp;</span>Parvathy Prasannan</p>
+          <p class="lead">We would be honoured by your presence and blessings as we celebrate our wedding and begin a new chapter of life together.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="details">
+      <div class="section-inner reveal">
+        <p class="eyebrow">The ceremony</p>
+        <h2>09 August 2026</h2>
+        <p class="lead">Sunday · Chiramel Auditorium, Udayanapuram</p>
+        <div class="details-grid">
+          <article class="detail"><div class="icon">◷</div><small>Muhurtham</small><strong>10:45 AM<br>to 11:45 AM</strong></article>
+          <article class="detail"><div class="icon">⌖</div><small>Venue</small><strong>Chiramel Auditorium<br>Udayanapuram</strong></article>
+          <article class="detail"><div class="icon">♡</div><small>With love</small><strong>Family &amp; Friends</strong></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="families">
+      <div class="section-inner reveal">
+        <p class="eyebrow">Our families</p>
+        <h2>Two families, one celebration</h2>
+        <div class="families">
+          <article class="family-card">
+            <h3>Harshakumar</h3>
+            <p>Son of Late Mr. Rameshan &amp; Mrs. Vilasini Rameshan<br>Kollasseril Vadakkathil, Pathiyoor East,<br>Kayamkulam, Alappuzha</p>
+          </article>
+          <article class="family-card">
+            <h3>Parvathy</h3>
+            <p>Daughter of Mr. Prasannan &amp; Mrs. Salila Prasannan<br>Ezhuthengintharayil, Udayanapuram P.O,<br>Vaikom, Kottayam</p>
+          </article>
+        </div>
+        <p class="lead" style="font-size:23px;margin-top:30px">With love — Aswathy Ramesh, Sajin Baskar &amp; Ivaan Baskar</p>
+      </div>
+    </section>
+
+    <section class="section blessing">
+      <div class="section-inner reveal">
+        <p class="eyebrow" style="color:#dfbd74">Your blessings</p>
+        <h2>As we begin our journey together</h2>
+        <div class="divider"></div>
+        <p class="lead">We seek your blessings for a life filled with love, peace and prosperity.</p>
+      </div>
+    </section>
+
+    <section class="section" id="venue">
+      <div class="section-inner reveal">
+        <p class="eyebrow">Find your way</p>
+        <h2>Join us in Udayanapuram</h2>
+        <div class="venue-card">
+          <div class="venue-visual">
+            <div>
+              <h3>Chiramel Auditorium</h3>
+              <p>Udayanapuram, Vaikom, Kerala<br>Sunday, 09 August 2026</p>
+            </div>
+          </div>
+          <div class="actions">
+            <a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&query=Chiramel+Auditorium+Udayanapuram+Kerala" target="_blank" rel="noopener">Navigate to venue</a>
+            <a class="btn btn-secondary" href="tel:+917736032343">Call for assistance</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <strong>Harsha &amp; Parvathy</strong><br>
+    09 August 2026 · The First Chapter
+  </footer>
+
+  <script>
+    const menu = document.getElementById('menu');
+    const openMenu = document.getElementById('menuOpen');
+    const closeMenu = document.getElementById('menuClose');
+    const openInvitation = document.getElementById('openInvitation');
+
+    function setMenu(open){
+      menu.classList.toggle('open',open);
+      menu.setAttribute('aria-hidden',String(!open));
+      document.body.style.overflow=open?'hidden':'';
+    }
+    openMenu.addEventListener('click',()=>setMenu(true));
+    closeMenu.addEventListener('click',()=>setMenu(false));
+    menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>setMenu(false)));
+
+    openInvitation.addEventListener('click',()=>{
+      document.getElementById('invitation').scrollIntoView({behavior:'smooth'});
+    });
+
+    const observer = new IntersectionObserver(entries=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    },{threshold:.14});
+    document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+  </script>
 </body>
 </html>
