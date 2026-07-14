@@ -325,12 +325,22 @@
     .reveal{opacity:0;transform:translateY(22px);transition:.7s ease}
     .reveal.visible{opacity:1;transform:none}
 
+
+    .brand-logo{
+      display:block;
+      width:min(170px,42vw);
+      height:auto;
+      margin:0 auto 24px;
+      object-fit:contain;
+      filter:drop-shadow(0 9px 22px rgba(58,45,28,.10));
+    }
+
     @media(max-width:720px){
       .details-grid{grid-template-columns:1fr}
       .families{grid-template-columns:1fr}
       .story-timeline{grid-template-columns:1fr}
       .story-timeline::before{display:none}
-      .brand-logo{width:min(190px,58vw);margin-bottom:20px}
+      .brand-logo{width:min(150px,42vw);margin-bottom:18px}
       .contact-grid{grid-template-columns:1fr}
       .section{padding:70px 18px}
     }
