@@ -329,6 +329,8 @@
       .details-grid{grid-template-columns:1fr}
       .families{grid-template-columns:1fr}
       .story-timeline{grid-template-columns:1fr}
+      .story-timeline::before{display:none}
+      .brand-logo{width:min(190px,58vw);margin-bottom:20px}
       .contact-grid{grid-template-columns:1fr}
       .section{padding:70px 18px}
     }
@@ -375,6 +377,7 @@
     <section class="section" id="invitation">
       <div class="section-inner reveal">
         <div class="invitation-card">
+          <img class="brand-logo" src="assets/harsha-parvathy-logo.png" alt="Harsha and Parvathy monogram logo">
           <p class="eyebrow">Together with our families</p>
           <h2>We invite you</h2>
           <div class="divider"></div>
@@ -401,26 +404,44 @@
     <section class="section" id="story">
       <div class="section-inner reveal">
         <p class="eyebrow">Our story</p>
-        <h2>From a conversation to a lifetime</h2>
+        <h2>Two paths, one connection</h2>
         <p class="lead">Though they were living in different countries, their conversations gradually brought them closer.</p>
         <div class="story-timeline">
           <article class="story-card">
             <div class="story-icon">✦</div>
-            <small>A beginning</small>
-            <h3>A Matrimony Match</h3>
-            <p>A simple profile match opened the door to a meaningful new connection between two families.</p>
+            <small>A meaningful beginning</small>
+            <h3>Ezhava Matrimony</h3>
+            <p>What began as a simple profile match soon became a meaningful connection between two families.</p>
+          </article>
+          <article class="story-card">
+            <div class="story-icon">↔</div>
+            <small>Oman &amp; Canada</small>
+            <h3>Two Paths</h3>
+            <p>While Harsha was working in Oman, Parvathy was continuing her studies in Canada.</p>
           </article>
           <article class="story-card">
             <div class="story-icon">☎</div>
             <small>02 May 2024</small>
             <h3>The First Call</h3>
-            <p>One phone call became many conversations, shared thoughts and a growing sense of understanding.</p>
+            <p>One conversation became many, bringing comfort, understanding and a growing connection.</p>
+          </article>
+          <article class="story-card">
+            <div class="story-icon">♡</div>
+            <small>Through changing seasons</small>
+            <h3>Growing Together</h3>
+            <p>Through uncertain moments, they became a source of strength and encouragement for one another.</p>
           </article>
           <article class="story-card">
             <div class="story-icon">✈</div>
-            <small>A cherished moment</small>
+            <small>10 July 2026 · 4:55 AM</small>
             <h3>The First Meeting</h3>
-            <p>After building their connection across Oman and Canada, they finally met at the airport and began a new chapter together.</p>
+            <p>A spontaneous journey turned their first meeting at Cochin International Airport into an unforgettable surprise.</p>
+          </article>
+          <article class="story-card">
+            <div class="story-icon">☼</div>
+            <small>The journey ahead</small>
+            <h3>A Shared Future</h3>
+            <p>Together, they look forward to a life filled with love, family, purpose, travel and new beginnings.</p>
           </article>
         </div>
       </div>
@@ -433,12 +454,12 @@
         <div class="families">
           <article class="family-card">
             <h3>Harshakumar</h3>
-            <p>Son of Late Mr. Rameshan &amp; Mrs. Vilasini Rameshan<br>Kollasseril Vadakkathil, Pathiyoor East,<br>Pathiyoor P.O., Kayamkulam, Alappuzha</p>
+            <p>S/O Late Mr. Rameshan &amp; Mrs. Vilasini Rameshan<br>Kollasseril Vadakkathil, Pathiyoor East,<br>Pathiyoor P.O., Kayamkulam, Alappuzha</p>
             <p class="family-love"><strong>With love</strong><br>Aswathy Ramesh, Sajin Baskar &amp; Ivaan Baskar</p>
           </article>
           <article class="family-card">
             <h3>Parvathy</h3>
-            <p>Daughter of Mr. Prasannan &amp; Mrs. Salila Prasannan<br>Ezhuthengintharayil, Udayanapuram P.O.,<br>Vaikom, Kottayam</p>
+            <p>D/O Mr. Prasannan &amp; Mrs. Salila Prasannan<br>Ezhuthengintharayil, Udayanapuram P.O.,<br>Vaikom, Kottayam</p>
             <p class="family-love"><strong>With love</strong><br>Prasin, Revathy, Vihaan &amp; Ihaan</p>
           </article>
         </div>
@@ -486,7 +507,7 @@
             </div>
           </article>
           <article class="contact-card">
-            <h3>Bride's Family</h3>
+            <h3>Bride's Side</h3>
             <p>+91 97465 70842</p>
             <div class="contact-actions">
               <a class="btn btn-primary" href="tel:+919746570842">Call</a>
