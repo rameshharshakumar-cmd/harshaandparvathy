@@ -242,6 +242,38 @@
     }
     .family-card p{margin:0;line-height:1.75;color:var(--muted);font-size:14px}
 
+
+    .story-timeline{
+      display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px;
+    }
+    .story-card{
+      background:rgba(255,250,242,.72);border:1px solid var(--line);border-radius:24px;
+      padding:26px 20px;text-align:center;box-shadow:0 12px 34px rgba(58,45,28,.07);
+    }
+    .story-card .story-icon{font-size:26px;color:var(--gold);margin-bottom:10px}
+    .story-card small{
+      display:block;color:var(--deep-gold);font-size:10px;letter-spacing:.16em;
+      text-transform:uppercase;font-weight:600;margin-bottom:8px;
+    }
+    .story-card h3{
+      margin:0 0 10px;font-family:"Cormorant Garamond",serif;font-size:30px;color:var(--green);
+    }
+    .story-card p{margin:0;color:var(--muted);line-height:1.7;font-size:14px}
+
+    .family-love{
+      margin-top:18px;padding-top:16px;border-top:1px solid var(--line);
+      font-family:"Cormorant Garamond",serif;font-size:20px!important;line-height:1.45!important;color:var(--green)!important;
+    }
+
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:34px}
+    .contact-card{
+      border:1px solid var(--line);border-radius:24px;padding:28px 22px;background:rgba(255,250,242,.72);text-align:center;
+    }
+    .contact-card h3{margin:0 0 8px;font-family:"Cormorant Garamond",serif;font-size:32px;color:var(--green)}
+    .contact-card p{margin:0 0 18px;color:var(--muted)}
+    .contact-actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+    .contact-actions .btn{min-width:145px}
+
     .blessing{
       background:linear-gradient(145deg,#294b31,#17331f);
       color:#fffaf2;
@@ -296,6 +328,8 @@
     @media(max-width:720px){
       .details-grid{grid-template-columns:1fr}
       .families{grid-template-columns:1fr}
+      .story-timeline{grid-template-columns:1fr}
+      .contact-grid{grid-template-columns:1fr}
       .section{padding:70px 18px}
     }
 
@@ -318,8 +352,10 @@
     <div class="menu-card">
       <a href="#invitation">Invitation</a>
       <a href="#details">Ceremony</a>
+      <a href="#story">Our Story</a>
       <a href="#families">Families</a>
       <a href="#venue">Venue</a>
+      <a href="#contact">Contact</a>
       <button class="icon-button" id="menuClose" aria-label="Close menu" style="margin:22px auto 0">×</button>
     </div>
   </div>
@@ -327,8 +363,8 @@
   <header class="hero-shell" id="home">
     <div class="hero-art">
       <picture>
-        <source srcset="hero-approved.webp" type="image/webp">
-        <img src="hero-approved.webp" alt="Harsha and Parvathy wedding invitation artwork">
+        <source srcset="assets/hero-final.webp" type="image/webp">
+        <img src="assets/hero-final.webp" alt="Harsha and Parvathy wedding invitation artwork">
       </picture>
       <button class="hero-hit" id="openInvitation" aria-label="Open invitation"></button>
       <div class="scroll-cue" aria-hidden="true">⌄</div>
@@ -361,6 +397,35 @@
       </div>
     </section>
 
+
+    <section class="section" id="story">
+      <div class="section-inner reveal">
+        <p class="eyebrow">Our story</p>
+        <h2>From a conversation to a lifetime</h2>
+        <p class="lead">Though they were living in different countries, their conversations gradually brought them closer.</p>
+        <div class="story-timeline">
+          <article class="story-card">
+            <div class="story-icon">✦</div>
+            <small>A beginning</small>
+            <h3>A Matrimony Match</h3>
+            <p>A simple profile match opened the door to a meaningful new connection between two families.</p>
+          </article>
+          <article class="story-card">
+            <div class="story-icon">☎</div>
+            <small>02 May 2024</small>
+            <h3>The First Call</h3>
+            <p>One phone call became many conversations, shared thoughts and a growing sense of understanding.</p>
+          </article>
+          <article class="story-card">
+            <div class="story-icon">✈</div>
+            <small>A cherished moment</small>
+            <h3>The First Meeting</h3>
+            <p>After building their connection across Oman and Canada, they finally met at the airport and began a new chapter together.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section class="section" id="families">
       <div class="section-inner reveal">
         <p class="eyebrow">Our families</p>
@@ -368,14 +433,15 @@
         <div class="families">
           <article class="family-card">
             <h3>Harshakumar</h3>
-            <p>Son of Late Mr. Rameshan &amp; Mrs. Vilasini Rameshan<br>Kollasseril Vadakkathil, Pathiyoor East,<br>Kayamkulam, Alappuzha</p>
+            <p>Son of Late Mr. Rameshan &amp; Mrs. Vilasini Rameshan<br>Kollasseril Vadakkathil, Pathiyoor East,<br>Pathiyoor P.O., Kayamkulam, Alappuzha</p>
+            <p class="family-love"><strong>With love</strong><br>Aswathy Ramesh, Sajin Baskar &amp; Ivaan Baskar</p>
           </article>
           <article class="family-card">
             <h3>Parvathy</h3>
-            <p>Daughter of Mr. Prasannan &amp; Mrs. Salila Prasannan<br>Ezhuthengintharayil, Udayanapuram P.O,<br>Vaikom, Kottayam</p>
+            <p>Daughter of Mr. Prasannan &amp; Mrs. Salila Prasannan<br>Ezhuthengintharayil, Udayanapuram P.O.,<br>Vaikom, Kottayam</p>
+            <p class="family-love"><strong>With love</strong><br>Prasin, Revathy, Vihaan &amp; Ihaan</p>
           </article>
         </div>
-        <p class="lead" style="font-size:23px;margin-top:30px">With love — Aswathy Ramesh, Sajin Baskar &amp; Ivaan Baskar</p>
       </div>
     </section>
 
@@ -401,11 +467,36 @@
           </div>
           <div class="actions">
             <a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&query=Chiramel+Auditorium+Udayanapuram+Kerala" target="_blank" rel="noopener">Navigate to venue</a>
-            <a class="btn btn-secondary" href="tel:+917736032343">Call for assistance</a>
           </div>
         </div>
       </div>
     </section>
+
+    <section class="section" id="contact">
+      <div class="section-inner reveal">
+        <p class="eyebrow">Need assistance?</p>
+        <h2>Contact our families</h2>
+        <div class="contact-grid">
+          <article class="contact-card">
+            <h3>Groom's Side</h3>
+            <p>+91 77360 32343</p>
+            <div class="contact-actions">
+              <a class="btn btn-primary" href="tel:+917736032343">Call</a>
+              <a class="btn btn-secondary" href="https://wa.me/917736032343?text=Hello%2C%20I%20am%20contacting%20you%20regarding%20Harsha%20and%20Parvathy%27s%20wedding." target="_blank" rel="noopener">WhatsApp</a>
+            </div>
+          </article>
+          <article class="contact-card">
+            <h3>Bride's Family</h3>
+            <p>+91 97465 70842</p>
+            <div class="contact-actions">
+              <a class="btn btn-primary" href="tel:+919746570842">Call</a>
+              <a class="btn btn-secondary" href="https://wa.me/919746570842?text=Hello%2C%20I%20am%20contacting%20you%20regarding%20Harsha%20and%20Parvathy%27s%20wedding." target="_blank" rel="noopener">WhatsApp</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer>
